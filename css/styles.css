@@ -2,25 +2,101 @@ html, body
 {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 html
 {
-	height: 100%;
 	min-width: 320px;
+}
+
+
+.Wrapper
+{
+	background-color: indigo;
+	display: flex;
+	flex-direction: column;
+}
+
+.Items
+{
+	border: 1.5px solid #EBEBEB;
+	display: flex;
+	align-items: center;
+	min-height: 6.25rem;
+	padding: 1rem;
+}
+
+.Header
+{
+	background-color: #105B63;
+	order: 1;
+}
+
+.Content
+{
+	background-color: #FFFAD5;
+	order: 2;
+}
+
+.SideOne
+{
+	background-color: #FFD34E;
+	order: 3;
+}
+
+.SideTwo
+{
+	background-color: #DB9E36;
+	order: 4;
+}
+
+.Footer
+{
+	background-color: #BD4932;
+	order: 5;
 }
 
 body
 {
 	font-family: 'Oswald', sans-serif;
-	color: #EBEBEB;
-	display: flex;
+	color: #000000;
 	background-color: #DFDFEF;
-	flex-direction: column;
 	min-height: 100%;
 }
 
-@media (min-width: 45rem)
+@media (min-width: 30rem)
 {
-	
+	.Wrapper
+	{
+		flex-flow: row wrap;
+	}
+
+	.Header
+	{
+		width: 100%;
+	}
+
+	.Content
+	{
+		flex: 1;
+		order: 3;
+	}
+
+	.SideOne
+	{
+		width: 150px;
+		order: 2;
+	}
+
+	.SideTwo
+	{
+		width: 150px;
+		order: 4;
+	}
+
+	.Footer
+	{
+		width: 100%;
+	}
 }
